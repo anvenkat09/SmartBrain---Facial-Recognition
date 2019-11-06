@@ -46,7 +46,6 @@ class App extends Component {
 
   onDetect = () => {
     console.log("click");
-    // fetch("http://localhost:5000/test")
   }
 
   render(){
