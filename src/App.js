@@ -12,7 +12,7 @@ import "tachyons"
 const particlesOptions = {
   particles: {
     number:{
-      value: 30,
+      value: 80,
       density: {
         enable: true,
         value_area: 800
@@ -87,8 +87,8 @@ class App extends Component {
     .then(
       response => {
         if(response){
-          fetch('http://localhost:3000/image', {
-            method: 'put',
+          fetch('https://pacific-reef-20355.herokuapp.com/image', {
+            method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
