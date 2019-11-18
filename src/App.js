@@ -88,7 +88,7 @@ class App extends Component {
       response => {
         if(response){
           fetch('https://pacific-reef-20355.herokuapp.com/image', {
-            method: 'post',
+            method: 'put',
             headers: {
                 'Content-Type': 'application/json'
             },
