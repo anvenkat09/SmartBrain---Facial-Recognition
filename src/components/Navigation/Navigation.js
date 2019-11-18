@@ -1,10 +1,22 @@
 import React from 'react';
 
-const Navigation = () => {
+const Navigation = ({currentRoute, onRouteChange}) => {
     return(
-        <div>
-            <p className='pointer tr pa3 underline br2 shadow-5'>Sign Out!</p>
-        </div>
+        (currentRoute === 'home' 
+            ? 
+            <div className='shadow-5' style={{display: 'flex', justifyContent: 'flex-end'}}>
+                <p className='pointer dim link tr pr3 underline br2' onClick={() => onRouteChange('signin')}>Sign Out!</p>
+            </div>
+            : 
+            (currentRoute === 'register' 
+                ?
+                <div className='shadow-5' style={{display: 'flex', justifyContent: 'flex-end'}}>
+                    <p className='pointer dim link tr pr3 underline br2' onClick={() => onRouteChange('signin')}>Sign In</p>
+                </div>
+                : 
+                <div></div>
+            )
+         )
     )
 }
 
