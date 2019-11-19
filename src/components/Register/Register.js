@@ -23,6 +23,7 @@ class Register extends React.Component{
     }
 
     onSubmitSignin = () => {
+        console.log(process.env.REGISTER);
         fetch(process.env.REGISTER, {
             method: 'post',
             headers: {
