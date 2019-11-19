@@ -74,7 +74,7 @@ class App extends Component {
     this.setState(
       {imageUrl: this.state.input}
     );
-    fetch(process.env.IMAGEURL, {
+    fetch(process.env.REACT_APP_IMAGEURL, {
       method: 'post',
       headers: {
           'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ class App extends Component {
     .then(
       response => {
         if(response){
-          fetch(process.env.IMAGE, {
+          fetch(process.env.REACT_APP_IMAGE, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
