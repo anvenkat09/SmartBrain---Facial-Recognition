@@ -74,7 +74,7 @@ class App extends Component {
     this.setState(
       {imageUrl: this.state.input}
     );
-    fetch('https://pacific-reef-20355.herokuapp.com/imageUrl', {
+    fetch(process.env.IMAGEURL, {
       method: 'post',
       headers: {
           'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ class App extends Component {
     .then(
       response => {
         if(response){
-          fetch('https://pacific-reef-20355.herokuapp.com/image', {
+          fetch(process.env.IMAGE, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
